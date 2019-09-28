@@ -1,0 +1,20 @@
+.main {
+    display: grid;
+    grid-template-areas: 
+    "top top top"
+    "nav main right";
+    grid-template-columns: 20% 1fr 20%;
+}
+.main-bar {
+    grid-area: main;
+    text-align: center;
+}
+.top-bar {
+    grid-area: top;
+}
+.left-bar {
+    grid-area: nav;
+}
+.right-bar {
+    grid-area: right;
+}

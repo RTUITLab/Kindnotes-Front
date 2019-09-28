@@ -1,2 +1,10 @@
-<p>main works!</p>
-<a routerLink="authentification">Авторизация</a>
+<div class="main">
+    <app-top-bar class="top-bar"></app-top-bar>
+    <app-left-bar class="left-bar"></app-left-bar>
+    <app-right-bar class="right-bar"></app-right-bar>
+    
+    <div class="main-bar">
+        <router-outlet></router-outlet>
+        <a routerLink="authentification">Авторизация</a>
+    </div>
+</div>

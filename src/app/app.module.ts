@@ -10,6 +10,10 @@ import { RouterModule } from '@angular/router';
 import { AuthentificationPageComponent } from './authentification-page/authentification-page.component';
 import { LoginComponent } from './authentification-page/login/login.component';
 import { RegistrationComponent } from './authentification-page/registration/registration.component';
+import { TopBarComponent } from './main/top-bar/top-bar.component';
+import { LeftBarComponent } from './main/left-bar/left-bar.component';
+import { RightBarComponent } from './main/right-bar/right-bar.component';
+import { NewsComponent } from './main/news/news.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { RegistrationComponent } from './authentification-page/registration/regi
     MainComponent,
     AuthentificationPageComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    TopBarComponent,
+    LeftBarComponent,
+    RightBarComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +34,11 @@ import { RegistrationComponent } from './authentification-page/registration/regi
     ApiModule.forRoot({ rootUrl: "http://10.70.3.91:5000" }),
     RouterModule.forRoot(
       [{
-        path:'', component: MainComponent
+        path:'', component: MainComponent, children: [
+          {
+            path:'', component: NewsComponent
+          },
+        ]
       },
       {
         path:'authentification', component: AuthentificationPageComponent, children: [
