@@ -26,8 +26,8 @@ export class LoginComponent implements OnInit {
     console.warn('Your order has been submitted', loginData);
     try {
       const r = await this.identity.apiIdentityLoginPost$Json$Json$Response({ body: loginData }).toPromise();
+      localStorage.setItem("token", r.body.token);
     } catch (ex) {
-
       alert(`Чет не так! ${ex}`);
     }
   }
