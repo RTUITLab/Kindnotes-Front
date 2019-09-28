@@ -1,20 +1,41 @@
-<p>login works!</p>
 
-<form [formGroup]="authForm" (ngSubmit)="onSubmit(authForm.value)">
-    <div>
-        <label>Логин
-            <input type="text" formControlName="email">
-        </label>
+<div class="slogan">
+    <div class="sloganText">Маленькие истории больших людей...</div>
+</div>
+<div class="loginBoxContainer">
+    <div class="loginBox">
+        <p class="loginBoxText1">Войти</p>
+
+        <form [formGroup]="authForm" (ngSubmit)="onSubmit(authForm.value)">
+            <div>
+                <label>
+                    <input class="inputText" type="text" placeholder="Логин" formControlName="email">
+                </label>
+                
+            </div>
+            <div class="line"></div>
+            <div>
+                <label>
+                    <input class="inputText" type="password" placeholder="Пароль" formControlName="password">
+                </label>
+            </div>
+            <div class="line"></div>
+            <div class="enter">
+                <button class="enterButton" type="submit">Вход</button>
+            </div>
+            
+        </form>
+
+        <div class="registerTextContainer">
+            <span class="registerText"> У вас еще нет аккаунта? </span>
+            <a class="registerText" routerLink="registration">Создайте его!</a> 
+            <span class="forgot">
+                Забыли пароль?
+            </span>
+        </div>
         
     </div>
+    
+</div>
 
-    <div>
-        <label>Пароль
-            <input type="password" formControlName="password">
-        </label>
-    </div>
 
-    <button type="submit">Войти</button>
-</form>
-
-<a routerLink="registration">Регистрация</a> 
