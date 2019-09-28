@@ -1,35 +1,69 @@
-<p>registration works!</p>
+<section id="box">
+  <div class="stepsContainer">
+  <div class="steps">
+    <p class="reg">
+      Регистрация
+    </p>
+    <div class="dot">1</div>
+    <div class="step">
+      Персональные данные
+    </div>
+    <div class="dot">2</div>
+    <div class="step">
+      Данные для верификации
+    </div>
+    <div class="dot">3</div>
+    <div class="step">
+      Платежная информация
+    </div>
+    <div class="dot">4</div>
+    <div class="step1">
+      Интересы
+    </div>
+  </div>
+
+</div>
 
 <form [formGroup]="regForm" (ngSubmit)="onSubmit(regForm.value)">
-    <div>
-        <label>Имя
-            <input type="text" formControlName="firstName">
-        </label>
-    </div>
-
-    <div>
-        <label>Фамилия
-            <input type="text" formControlName="lastName">
-        </label>
-    </div>
-
-    <div>
-        <label>Электронная почта
-            <input type="text" formControlName="email">
-        </label>
-    </div>
-
-    <div>
-        <label>Пароль
-            <input type="password" formControlName="password">
-        </label>
-    </div>
-
-    <div>
-        <label>Повторите пароль
-            <input type="password" formControlName="repPassword">
-        </label>
-    </div>
-
-    <button type="submit">Зарегистрироваться</button>
+    <div class="loginBox">
+      <div class="enteringInfo">
+        <div>
+                <label>
+                    <input class="inputText" type="text" placeholder="Имя" formControlName="firstName">
+                </label>
+            </div>
+        
+            <div>
+                <label>
+                    <input class="inputText" type="text" placeholder="Фамилия" formControlName="lastName">
+                </label>
+            </div>
+        
+            <div>
+                <label>
+                    <input class="inputText" type="text" placeholder="Электронная почта" formControlName="email">
+                </label>
+            </div>
+        
+            <div>
+                <label>
+                    <input class="inputText" type="password" placeholder="Пароль" formControlName="password">
+                </label>
+            </div>
+        
+            <div>
+                <label>
+                    <input class="inputText" type="password" placeholder="Повторите пароль" formControlName="repPassword">
+                </label>
+            </div>
+      </div>
+         <div class="fields">
+          <img src="Avatar.png">
+          <div class="info">Обратите внимание, что для успешного прохождения верификации на аватаре должно быть хорошо видно лицо. </div>
+        </div>   
+            <button class="submit" type="submit">Продолжить</button>
+        </div>   
 </form>
+</section>
+
+    
