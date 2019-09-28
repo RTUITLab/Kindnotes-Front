@@ -1,1 +1,35 @@
 <p>registration works!</p>
+
+<form [formGroup]="regForm" (ngSubmit)="onSubmit(regForm.value)">
+    <div>
+        <label>Имя
+            <input type="text" formControlName="firstName">
+        </label>
+    </div>
+
+    <div>
+        <label>Фамилия
+            <input type="text" formControlName="lastName">
+        </label>
+    </div>
+
+    <div>
+        <label>Электронная почта
+            <input type="text" formControlName="email">
+        </label>
+    </div>
+
+    <div>
+        <label>Пароль
+            <input type="password" formControlName="password">
+        </label>
+    </div>
+
+    <div>
+        <label>Повторите пароль
+            <input type="password" formControlName="repPassword">
+        </label>
+    </div>
+
+    <button type="submit">Зарегистрироваться</button>
+</form>
