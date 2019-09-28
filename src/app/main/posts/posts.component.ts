@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Work } from 'src/app/api/models';
-import { WorksService } from 'src/app/api/services';
+import { TasksService } from 'src/app/api/services';
+import { CompactTask } from 'src/app/api/models';
 
 @Component({
   selector: 'app-posts',
@@ -9,18 +9,30 @@ import { WorksService } from 'src/app/api/services';
 })
 export class PostsComponent implements OnInit {
 
+  tasks: CompactTask[] = [];
 
-  tasks: Work[];
-
-  constructor(private work: WorksService) {
+  constructor(private task: TasksService) {
   }
 
   async getNews() {
     try {
-      this.tasks = await this.work.apiWorksGet$Json().toPromise();
+      this.tasks = await this.task.apiTasksGet$Json().toPromise();
     } catch (ex) {
       alert("Что-то не так!");
     }
+  }
+
+  getInitiator(task: CompactTask) {
+    if (task.organizationInitiator)
+      return task.organizationInitiator.name;
+    
+    return task.personInitiator.name;
+  }
+
+  setData(task: string) {
+    const date: Date = new Date(task);
+
+    return `${date.getDay() - 1}.${date.getMonth() + 1}.${date.getFullYear()}`;
   }
 
   ngOnInit() {

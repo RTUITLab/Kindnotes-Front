@@ -1,16 +1,23 @@
 <h1>Задачи</h1>
 
-<div *ngIf="tasks.length != 0 ; else elseBlock">
-    <div *ngFor="let task of tasks">
-
+<div div class="tasks" *ngIf="tasks.length != 0; else elseBlock">
+    <div class="task-block" *ngFor="let task of tasks">
+        <h4>до {{ setData(task.deadline) }}</h4>
         <div>
-            <h3>{{ task.title }}</h3>
-            <h4>{{ task.deadline }}</h4>
+            <h3>Тема:</h3>
+            <p>{{ task.title }}</p>
         </div>
-
+        <div>
+            <h3>Заказчик:</h3>
+            <p>{{getInitiator(task)}}</p>
+        </div>
+        <div>
+            <h3>Контактное лицо:</h3>
+            <p>{{task.contactPerson.name}}</p>
+        </div>
+        <button>Информация</button>
     </div>
 </div>
-
 <ng-template #elseBlock>
     <h3>Нет задач!</h3>
 </ng-template>
