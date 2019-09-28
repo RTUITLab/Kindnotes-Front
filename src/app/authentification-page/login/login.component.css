@@ -1,0 +1,141 @@
+.slogan {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 0 0;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+.sloganText {
+  font-family: Helvetica;
+  font-size: 40px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #9e7e81;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.loginBox{
+  width: 727px;
+  height: 443px;
+  box-shadow: 0 4px 4px 0 rgba(98, 98, 98, 0.25);
+  background-color: rgba(153, 147, 145, 0.74);
+  margin: 0 auto;
+}
+
+.loginBoxContainer {
+  align-content: center;
+  width: 100%;
+}
+
+.loginBoxText1{
+  height: 48px;
+  font-family: Helvetica;
+  font-size: 40px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(255, 255, 255, 0.76);
+  text-align: center;
+  padding-top: 20px;
+
+}
+
+input {
+  width:100%;
+  background-color: transparent;
+  border-color: transparent;
+  font-family: Helvetica;
+  font-size: 30px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.inputText {
+  font-family: Helvetica;
+  font-size: 30px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(255, 255, 255, 0.76);
+  text-align: center;
+}
+
+.enter {
+  width: 727px;
+  height: 50px;
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.24), #ffffff 49%, rgba(255, 255, 255, 0.25));
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+.enterButton {
+  font-family: Helvetica;
+  font-size: 30px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #9e7e81;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(255, 255, 255, 0.76);
+  opacity: 1; /* Firefox */
+}
+
+.registerText{
+  font-family: Helvetica;
+  font-size: 21px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(255, 255, 255, 0.76);
+  text-align: left;
+}
+
+.registerTextContainer{
+  margin: 30px;
+}
+
+.line {
+  width: 594px;
+  height: 1px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.forgot {
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(255, 255, 255, 0.76);
+  text-align: right;
+  margin-left: 100px;
+}
