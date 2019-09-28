@@ -21,6 +21,7 @@ import { UserService } from './service/user-service.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ApiInterceptor } from 'src/app/service/user-service.service'
 import { Provider } from '@angular/compiler/src/core';
+import { PostsComponent } from './main/posts/posts.component';
 
 export const API_INTERCEPTOR_PROVIDER: Provider = {
   provide: HTTP_INTERCEPTORS,
@@ -38,7 +39,8 @@ export const API_INTERCEPTOR_PROVIDER: Provider = {
     TopBarComponent,
     LeftBarComponent,
     RightBarComponent,
-    NewsComponent
+    NewsComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +54,9 @@ export const API_INTERCEPTOR_PROVIDER: Provider = {
         path: '', component: MainComponent, children: [
           {
             path: '', component: NewsComponent
+          },
+          {
+            path: 'posts', component: PostsComponent
           },
         ]
       },
