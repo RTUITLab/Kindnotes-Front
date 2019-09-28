@@ -3,7 +3,8 @@
     grid-template-areas: 
     "top top top"
     "nav main right";
-    grid-template-columns: 20% 1fr 20%;
+    grid-template-columns: 15.8% 1fr 20%;
+    grid-template-rows: 9.9vh auto 
 }
 .main-bar {
     grid-area: main;
@@ -14,6 +15,7 @@
 }
 .left-bar {
     grid-area: nav;
+    border: solid 1px #f9d4c7;
 }
 .right-bar {
     grid-area: right;

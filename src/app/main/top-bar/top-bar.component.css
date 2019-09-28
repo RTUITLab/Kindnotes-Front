@@ -2,7 +2,9 @@
     height: 100%;
     display: grid;
     grid-template-areas: 
-    "a b c";
-    grid-template-columns: 33%;
+    "a b c d";
+    grid-template-columns: 20% auto 10% 10%;
     text-align: center;
+    background-image: linear-gradient(to left, #ffdec8, #e28c6f 42%, #f7635b 75%, #fd468e);
 }
+
