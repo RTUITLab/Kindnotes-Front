@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, forwardRef } from '@angular/core';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
@@ -16,6 +16,18 @@ import { TopBarComponent } from './main/top-bar/top-bar.component';
 import { LeftBarComponent } from './main/left-bar/left-bar.component';
 import { RightBarComponent } from './main/right-bar/right-bar.component';
 import { NewsComponent } from './main/news/news.component';
+import { UserService } from './service/user-service.service';
+
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ApiInterceptor } from 'src/app/service/user-service.service'
+import { Provider } from '@angular/compiler/src/core';
+import { PostsComponent } from './main/posts/posts.component';
+
+export const API_INTERCEPTOR_PROVIDER: Provider = {
+  provide: HTTP_INTERCEPTORS,
+  useExisting: forwardRef(() => ApiInterceptor),
+  multi: true
+};
 
 @NgModule({
   declarations: [
@@ -27,7 +39,8 @@ import { NewsComponent } from './main/news/news.component';
     TopBarComponent,
     LeftBarComponent,
     RightBarComponent,
-    NewsComponent
+    NewsComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +54,9 @@ import { NewsComponent } from './main/news/news.component';
         path: '', component: MainComponent, children: [
           {
             path: '', component: NewsComponent
+          },
+          {
+            path: 'posts', component: PostsComponent
           },
         ]
       },
@@ -56,7 +72,9 @@ import { NewsComponent } from './main/news/news.component';
       }]
     )
   ],
-  providers: [],
+  providers: [UserService,
+    ApiInterceptor,
+    API_INTERCEPTOR_PROVIDER],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

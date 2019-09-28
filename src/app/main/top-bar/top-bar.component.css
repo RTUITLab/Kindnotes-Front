@@ -1,0 +1,8 @@
+.top-main{
+    height: 100%;
+    display: grid;
+    grid-template-areas: 
+    "a b c";
+    grid-template-columns: 33%;
+    text-align: center;
+}
