@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ApiModule } from './api/api.module';
@@ -31,22 +33,24 @@ import { NewsComponent } from './main/news/news.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     ApiModule.forRoot({ rootUrl: "http://10.70.3.91:5000" }),
     RouterModule.forRoot(
       [{
-        path:'', component: MainComponent, children: [
+        path: '', component: MainComponent, children: [
           {
-            path:'', component: NewsComponent
+            path: '', component: NewsComponent
           },
         ]
       },
       {
-        path:'authentification', component: AuthentificationPageComponent, children: [
+        path: 'authentification', component: AuthentificationPageComponent, children: [
           {
-            path:'', component: LoginComponent
+            path: '', component: LoginComponent
           },
           {
-            path:'registration', component: RegistrationComponent
+            path: 'registration', component: RegistrationComponent
           }
         ]
       }]
