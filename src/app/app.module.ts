@@ -22,6 +22,10 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ApiInterceptor } from 'src/app/service/user-service.service'
 import { Provider } from '@angular/compiler/src/core';
 import { PostsComponent } from './main/posts/posts.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatNativeDateModule }  from '@angular/material/core';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DetailedInformationComponent } from './main/posts/detailed-information/detailed-information.component';
 
 export const API_INTERCEPTOR_PROVIDER: Provider = {
   provide: HTTP_INTERCEPTORS,
@@ -40,13 +44,16 @@ export const API_INTERCEPTOR_PROVIDER: Provider = {
     LeftBarComponent,
     RightBarComponent,
     NewsComponent,
-    PostsComponent
+    PostsComponent,
+    DetailedInformationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MatNativeDateModule,
     FormsModule,
+    MatDialogModule,
     ReactiveFormsModule,
     ApiModule.forRoot({ rootUrl: "http://10.70.3.91:5000" }),
     RouterModule.forRoot(
@@ -70,7 +77,8 @@ export const API_INTERCEPTOR_PROVIDER: Provider = {
           }
         ]
       }]
-    )
+    ),
+    BrowserAnimationsModule
   ],
   providers: [UserService,
     ApiInterceptor,

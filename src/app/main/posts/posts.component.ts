@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TasksService } from 'src/app/api/services';
-import { CompactTask, CompactNetworkType } from 'src/app/api/models';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { CompactTask } from 'src/app/api/models';
+import { DetailedInformationComponent } from './detailed-information/detailed-information.component';
 
 @Component({
   selector: 'app-posts',
@@ -11,7 +13,7 @@ export class PostsComponent implements OnInit {
 
   tasks: CompactTask[] = [];
 
-  constructor(private task: TasksService) {
+  constructor(private task: TasksService, public dialog: MatDialog) {
   }
 
   async getNews() {
@@ -25,7 +27,7 @@ export class PostsComponent implements OnInit {
   getInitiator(task: CompactTask) {
     if (task.organizationInitiator)
       return task.organizationInitiator.name;
-    
+
     return task.personInitiator.name;
   }
 
@@ -37,5 +39,13 @@ export class PostsComponent implements OnInit {
 
   ngOnInit() {
     this.getNews();
+  }
+
+  openDialog() {
+    this.dialog.open(DetailedInformationComponent, {
+      data: {
+        animal: 'panda'
+      }
+    });
   }
 }

@@ -14,9 +14,9 @@
             </div>
             <div>
                 <h3>Контактное лицо:</h3>
-                <p>{{ task.contactPerson.name }}</p>
+                <p>{{ task.contactPerson.name }} -  {{task.contactPerson.id}}</p>
             </div>
-            <button>Информация</button>
+            <button mat-button (click)="openDialog()">Информация</button>
 
             <div class="price">
                 <p>Вознаграждение:</p>
