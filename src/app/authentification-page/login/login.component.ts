@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FormBuilder } from '@angular/forms';
 import { IdentityService } from 'src/app/api/services';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   authForm;
 
-  constructor(private formBuilder: FormBuilder, private identity: IdentityService) {
+  constructor(private formBuilder: FormBuilder, private identity: IdentityService, private router: Router) {
     this.authForm = formBuilder.group({
       email: '',
       password: ''
@@ -26,6 +27,7 @@ export class LoginComponent implements OnInit {
     try {
       const r = await this.identity.apiIdentityLoginPost$Json$Response({ body: loginData }).toPromise();
       localStorage.setItem("token", r.body.token);
+      this.router.navigate(['']);
     } catch (ex) {
       alert(`Чет не так! ${ex}`);
     }
