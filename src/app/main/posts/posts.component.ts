@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TasksService } from 'src/app/api/services';
-import { CompactTask } from 'src/app/api/models';
+import { CompactTask, CompactNetworkType } from 'src/app/api/models';
 
 @Component({
   selector: 'app-posts',
@@ -16,7 +16,7 @@ export class PostsComponent implements OnInit {
 
   async getNews() {
     try {
-      this.tasks = await this.task.apiTasksGet$Json().toPromise();
+      this.tasks = await this.task.apiTasksGet().toPromise();
     } catch (ex) {
       alert("Что-то не так!");
     }

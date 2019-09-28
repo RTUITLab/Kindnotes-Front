@@ -2,20 +2,32 @@
 
 <div div class="tasks" *ngIf="tasks.length != 0; else elseBlock">
     <div class="task-block" *ngFor="let task of tasks">
-        <h4>до {{ setData(task.deadline) }}</h4>
-        <div>
-            <h3>Тема:</h3>
-            <p>{{ task.title }}</p>
+        <div class="info">
+            <h4>до {{ setData(task.deadline) }}</h4>
+            <div>
+                <h3>Тема:</h3>
+                <p>{{ task.title }}</p>
+            </div>
+            <div>
+                <h3>Заказчик:</h3>
+                <p>{{ getInitiator(task) }}</p>
+            </div>
+            <div>
+                <h3>Контактное лицо:</h3>
+                <p>{{ task.contactPerson.name }}</p>
+            </div>
+            <button>Информация</button>
+
+            <div class="price">
+                <p>Вознаграждение:</p>
+                
+            </div>
         </div>
-        <div>
-            <h3>Заказчик:</h3>
-            <p>{{getInitiator(task)}}</p>
+        <div class="social">
+            <div *ngFor="let social of task.networks">
+                <a [href]="social.url" target="_blank">{{social.title}}</a>
+            </div>
         </div>
-        <div>
-            <h3>Контактное лицо:</h3>
-            <p>{{task.contactPerson.name}}</p>
-        </div>
-        <button>Информация</button>
     </div>
 </div>
 <ng-template #elseBlock>
