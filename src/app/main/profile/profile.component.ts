@@ -57,6 +57,7 @@ export class ProfileComponent implements OnInit {
       height: '40%',
       panelClass: "test-dialog",
     });
+    dialogRef.afterClosed().subscribe(() => this.getWorkerTask());
   }
 
   openDialogResult(task: CompactTask) {
@@ -69,6 +70,7 @@ export class ProfileComponent implements OnInit {
             panelClass: "test-dialog",
             data: task
           });
+          dialogRef.afterClosed().subscribe(() => this.getWorkerTask());
           break;
         }
       case 2: {
@@ -78,6 +80,7 @@ export class ProfileComponent implements OnInit {
           panelClass: "test-dialog",
           data: task
         });
+        dialogRef.afterClosed().subscribe(() => this.getWorkerTask());
         break;
       }
     }

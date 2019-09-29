@@ -3,7 +3,8 @@
     <p>Укажите ссылки на социальные сети:</p>
     <div *ngFor="let social of data.networks">
         {{social.title}}:  
-        <input type="text">
+        <input type="text" formControlName={{social.title}}>
+        <button (click)="onsend(social.title, social.id)" >Отправить</button>
     </div>
-    <br><button type="submit" style="margin-top: 4%">Отправить</button>
+    <!-- <br><button type="submit" style ="margin-top: 4%">Отправить</button> -->
 </form>

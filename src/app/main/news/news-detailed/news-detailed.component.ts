@@ -14,7 +14,7 @@ export class NewsDetailedComponent implements OnInit {
 
   newsItem: FullTask;
   newsItemId: number;
-
+  vkid;
   constructor(
     private route: ActivatedRoute,
     private newsService: NewsService) { }
@@ -29,6 +29,16 @@ export class NewsDetailedComponent implements OnInit {
 
   private async load() {
     this.newsItem = await this.newsService.apiNewsIdGet({id: this.newsItemId}).toPromise();
+    const vkLink = this.newsItem.networkLinks.find(l => l.type.id === 1);
+    if (!vkLink)
+      return;
+
+    console.log(vkLink.value);
+    const first = vkLink.value.substring(vkLink.value.indexOf("VK.W"),vkLink.value.indexOf("');")+3);
+    this.vkid = first.substring(first.indexOf('Post("')+6, first.indexOf('", '));
+    eval(first);
+    console.log(first);
+  
   }
 
 }
