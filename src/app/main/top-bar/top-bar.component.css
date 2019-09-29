@@ -1,10 +1,55 @@
 .top-main{
-    height: 100%;
+    height: 70px;
     display: grid;
     grid-template-areas: 
     "a b c d";
     grid-template-columns: 20% auto 10% 10%;
     text-align: center;
     background-image: linear-gradient(to left, #ffdec8, #e28c6f 42%, #f7635b 75%, #fd468e);
+}
+
+.kindnotes {
+    font-family: SignPainter-HouseScript;
+    font-size: 44px;
+    text-align: left;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    padding: 12px;
+    margin: 0px;
+  }
+
+.searchInfo{
+    width: 300px;
+  height: 32px;
+  background-color: rgba(254, 225, 216, 0.81);
+  border: none;
+  position: absolute;
+    left: 180px;
+    top: 15px;
+}
+
+::placeholder {
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  padding-left: 10px;
+  }
+
+.searchButton {
+    height: 34px;
+    width: 50px;
+    position: absolute;
+    left: 500px;
+    top: 15px;
+    border: none;
 }
 

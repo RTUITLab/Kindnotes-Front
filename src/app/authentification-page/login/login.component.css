@@ -60,6 +60,7 @@ input {
   line-height: normal;
   letter-spacing: normal;
   color: rgba(255, 255, 255, 0.76);
+  outline: none;
 }
 
 .inputText {
@@ -95,6 +96,7 @@ input {
   padding: 0;
   border: none;
   background: none;
+  outline: none;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
