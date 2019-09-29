@@ -1,0 +1,64 @@
+.container{
+  border: solid 1px #f9d4c7;
+}
+
+.head{
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #e38c70;
+  margin-left: 15px;
+}
+
+.line{
+  width: 170px;
+  height: 1px;
+  border: none;
+  background-color: #e49277;
+  margin-left: 15px;
+  margin-top: 50px;
+}
+
+.info{
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #444444;
+  margin-left: 15px;
+}
+
+.iconHeart{
+  background-image:url('src/assets/images/Icons/like.svg');
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  border-color: white;
+}
+
+.iconComment{
+  background-image:url('src/assets/images/Icons/chat.svg');
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  border-color: white;
+  float: left;
+}
+
+.num {
+  float: left;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+
+.stats{
+  float: left;
+}
