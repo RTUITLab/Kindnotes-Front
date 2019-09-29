@@ -23,6 +23,9 @@ export class FinishTaskComponent implements OnInit {
       })
      }
 
+     get sourceLink() {
+       return `${location.origin}/news/${this.data.id}`;
+     }
   ngOnInit() {
   }
 

@@ -1,3 +1,6 @@
 <h1>Новости</h1>
+<div *ngFor="let event of events" >
+    <app-news-detailed passedId={{event.id}}></app-news-detailed>
 
+</div>
 

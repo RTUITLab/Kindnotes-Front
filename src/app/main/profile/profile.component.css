@@ -11,9 +11,13 @@
 
 .info{
     background-color: rgba(241, 241, 241, 0.91);
+    padding-left: 10%;
 }
 .social{
   background-color: rgba(164, 164, 164, 0.62);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title{
@@ -57,6 +61,8 @@
 
 .price{
     text-align: left;
+    display: flex;
+    align-items: center;
 }
 
 .submitContainer {
@@ -66,3 +72,16 @@ text-align: center;
   .image1{
       background-image: url('src/assets/images/Icons/heart.svg')
   }
+.socialImg {
+
+    width: 50px;
+    height: 50px;
+    padding-top: 10px;
+}
+
+.image2 {
+    padding: 0px 5px; 
+    width: 21px;
+    height: 21px;
+    color: #fa5375;
+}

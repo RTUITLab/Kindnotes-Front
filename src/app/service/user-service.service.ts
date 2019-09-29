@@ -49,7 +49,6 @@ export class UserService {
 
     try {
       this.userModel = await this.identity.apiIdentityMeGet().toPromise();
-      alert(`Здравствуй, ${this.userModel.name}`)
     } catch (ex) {
       alert(`Чет не так! ${ex}`);
     }

@@ -36,6 +36,7 @@ import { VerificationComponent } from './main/profile/verification/verification.
 import { NewsDetailedComponent } from './main/news/news-detailed/news-detailed.component';
 import { ApprovComponent } from './main/profile/approv/approv.component';
 import { FinishTaskComponent } from './main/profile/finish-task/finish-task.component';
+import { SafePipe } from './service/SafePipe';
 
 export const API_INTERCEPTOR_PROVIDER: Provider = {
   provide: HTTP_INTERCEPTORS,
@@ -63,7 +64,8 @@ export const API_INTERCEPTOR_PROVIDER: Provider = {
     VerificationComponent,
     NewsDetailedComponent,
     ApprovComponent,
-    FinishTaskComponent
+    FinishTaskComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

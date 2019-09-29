@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WorksService } from 'src/app/api/services';
-import { CompactTask } from 'src/app/api/models';
+import { CompactTask, CompactNetworkType } from 'src/app/api/models';
 import { MatDialog } from '@angular/material/dialog';
 import { VerificationComponent } from './verification/verification.component';
 import { ApprovComponent } from './approv/approv.component';
@@ -26,6 +26,21 @@ export class ProfileComponent implements OnInit {
       return task.organizationInitiator.name;
 
     return task.personInitiator.name;
+  }
+
+  socialIcon(social: CompactNetworkType){
+    switch (social.id) {
+      case 1:
+        return "assets/images/Icons/vk.png"
+        case 2:
+            return "assets/images/Icons/yt.png"
+      case 3:
+        return "assets/images/Icons/instagram.png"
+      case 4:
+        return "assets/images/Icons/twitter.png"        
+      default:
+        return ""
+    }
   }
 
   setData(task: string) {
@@ -65,8 +80,8 @@ export class ProfileComponent implements OnInit {
       case 1:
         {
           const dialogRef = this.dialog.open(ApprovComponent, {
-            width: '30%',
-            height: '20%',
+            width: '40%',
+            height: '40%',
             panelClass: "test-dialog",
             data: task
           });

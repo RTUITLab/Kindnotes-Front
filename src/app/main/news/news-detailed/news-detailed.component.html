@@ -1,7 +1,10 @@
 <div *ngIf="newsItem">
     <h2>{{newsItem.title}}</h2>
     <div class="container">
-        <div class="content" id="{{vkid}}"></div>
-
+        <div *ngIf="vkid" class="content" id="{{vkid}}"></div>
+        <div *ngIf="ytid" class="content">
+                <iframe  width="560" height="315" [src]="ytid | safe" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
 </div>

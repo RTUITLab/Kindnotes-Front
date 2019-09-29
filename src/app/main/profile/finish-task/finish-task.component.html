@@ -1,5 +1,6 @@
 <h1 mat-dialog-title>Сдача задания</h1>
 <form [formGroup]="finishForm" (ngSubmit)="onSubmit(finishForm.value)">
+    <p>Ваша ссылка-источник: <b>{{sourceLink}}</b></p>
     <p>Укажите ссылки на социальные сети:</p>
     <div *ngFor="let social of data.networks">
         {{social.title}}:  

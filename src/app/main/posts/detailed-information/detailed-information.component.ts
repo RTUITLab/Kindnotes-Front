@@ -58,7 +58,7 @@ export class DetailedInformationComponent implements OnInit {
     this.dialogRef.close();
     } catch (ex)
     {
-      alert("Что-то не так!");
+      alert("Необходимо пройти верификацию в профиле!");
     }
   }
 

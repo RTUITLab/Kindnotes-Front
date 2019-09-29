@@ -24,15 +24,14 @@
             <div class="price">
                 <div class="title">Вознаграждение:</div>
                 <div *ngFor="let price of task.prices">
-                        <p>{{price.priceType.name}}</p>
-                        <img src="../../../../src/assets/images/Icons/heart.svg" class="image1" *ngIf="price.priceType.name==='Деньги'">
-                        <p *ngIf="price.priceType.name==='Лайки'">ЛУКАСЫ</p>
+                        <img src="/assets/images/Icons/coin.svg" *ngIf="price.priceType.name==='Деньги'" class="image2">
+                        <img src="/assets/images/Icons/heart.svg" class="image2" *ngIf="price.priceType.name==='Лайки'">
                     </div>
             </div>
         </div>
         <div class="social">
             <div *ngFor="let social of task.networks">
-                <a [href]="social.url" target="_blank">{{social.title}}</a>
+                <img class="image1" src="{{socialIcon(social)}}">
             </div>
         </div>
     </div>

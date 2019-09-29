@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TasksService } from 'src/app/api/services';
 import { MatDialog } from '@angular/material/dialog';
-import { CompactTask } from 'src/app/api/models';
+import { CompactTask, CompactNetworkType } from 'src/app/api/models';
 import { DetailedInformationComponent } from './detailed-information/detailed-information.component';
 
 @Component({
@@ -36,7 +36,20 @@ export class PostsComponent implements OnInit {
     const s : string = date.getDay() + 1 < 10 ? `0${date.getDay() + 1}` : `${date.getDay() + 1}`
     return `${s}.${date.getMonth() + 1}.${date.getFullYear()}`;
   }
-
+  socialIcon(social: CompactNetworkType){
+    switch (social.id) {
+      case 1:
+        return "assets/images/Icons/vk.png"
+        case 2:
+            return "assets/images/Icons/yt.png"
+      case 3:
+        return "assets/images/Icons/instagram.png"
+      case 4:
+        return "assets/images/Icons/twitter.png"        
+      default:
+        return ""
+    }
+  }
   ngOnInit() {
     this.getTasks();
   }
@@ -50,7 +63,7 @@ export class PostsComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      this.getTasks();
      
     });
   }
