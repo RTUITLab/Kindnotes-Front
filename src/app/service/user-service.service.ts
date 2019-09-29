@@ -13,7 +13,7 @@ export class ApiInterceptor implements HttpInterceptor {
     // Apply the headers
     req = req.clone({
       setHeaders: {
-        // 'Authorization': `Bearer ${localStorage.getItem("token")}`
+        'Authorization': `Bearer ${localStorage.getItem("token")}`
       }
     });
     return next.handle(req).pipe(
@@ -36,15 +36,15 @@ export class UserService {
 
   }
 
-  get isAuthorized(): boolean {
-    // if (localStorage.getItem("token"))
-    //   return true;
+  isAuthorized(){
+    if (localStorage.getItem("token"))
+      return true;
 
     return false;
   }
 
   async getUserModel() {
-    // if (!this.isAuthorized)
+    if (!this.isAuthorized)
       return;
 
     try {

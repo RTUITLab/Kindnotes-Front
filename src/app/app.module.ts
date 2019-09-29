@@ -25,13 +25,14 @@ import { ApiInterceptor } from 'src/app/service/user-service.service'
 import { Provider } from '@angular/compiler/src/core';
 import { PostsComponent } from './main/posts/posts.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatNativeDateModule }  from '@angular/material/core';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDialogModule } from '@angular/material/dialog';
 import { DetailedInformationComponent } from './main/posts/detailed-information/detailed-information.component';
 import { CompactComponent } from './main/posts/compact/compact.component';
 import { CategoriesComponent } from './main/left-bar/categories/categories.component';
 import { PopularComponent } from './main/left-bar/popular/popular.component';
 import { ProfileComponent } from './main/profile/profile.component';
+import { VerificationComponent } from './main/profile/verification/verification.component';
 
 export const API_INTERCEPTOR_PROVIDER: Provider = {
   provide: HTTP_INTERCEPTORS,
@@ -55,7 +56,8 @@ export const API_INTERCEPTOR_PROVIDER: Provider = {
     CompactComponent,
     CategoriesComponent,
     PopularComponent,
-    ProfileComponent
+    ProfileComponent,
+    VerificationComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +77,7 @@ export const API_INTERCEPTOR_PROVIDER: Provider = {
           {
             path: 'posts', component: PostsComponent
           },
-          {path: 'profile', component: ProfileComponent}
+          { path: 'profile', component: ProfileComponent }
         ]
       },
       {
@@ -96,7 +98,8 @@ export const API_INTERCEPTOR_PROVIDER: Provider = {
     ApiInterceptor,
     API_INTERCEPTOR_PROVIDER],
   bootstrap: [AppComponent],
-  entryComponents:[PostsComponent,
-    DetailedInformationComponent]
+  entryComponents: [PostsComponent,
+    DetailedInformationComponent, ProfileComponent,
+    VerificationComponent]
 })
 export class AppModule { }

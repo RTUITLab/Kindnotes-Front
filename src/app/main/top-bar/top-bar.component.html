@@ -11,7 +11,10 @@
     <div class="c">
         <a routerLink='/posts'>Задачи</a>
     </div>
-    <div class="d">
+    <div class="d" *ngIf="!userService.isAuthorized(); else elseBlock">
         <a routerLink='/authentification'>Авторизация</a>
     </div>
+    <ng-template #elseBlock>
+            <a routerLink='/profile'>Профиль</a>
+        </ng-template>
 </div>

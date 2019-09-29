@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { WorksService } from 'src/app/api/services';
 import { CompactTask } from 'src/app/api/models';
+import { MatDialog } from '@angular/material/dialog';
+import { VerificationComponent } from './verification/verification.component';
 
 @Component({
   selector: 'app-profile',
@@ -11,7 +13,7 @@ export class ProfileComponent implements OnInit {
 
 tasks : CompactTask[] = [];
 
-  constructor(private workService : WorksService) { }
+  constructor(private workService : WorksService, public dialog: MatDialog) { }
 
   ngOnInit() {
     this.getWorkerTask();
@@ -37,5 +39,14 @@ tasks : CompactTask[] = [];
     {
 
     }
+  }
+
+  openDialog()
+  {
+    const dialogRef = this.dialog.open(VerificationComponent, {
+      width: '40%',
+      height: '40%',
+      panelClass: "test-dialog",
+    });
   }
 }
