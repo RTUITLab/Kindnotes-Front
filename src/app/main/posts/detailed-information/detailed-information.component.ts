@@ -1,7 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { CompactTask, FullTask, CompactPrice } from 'src/app/api/models';
-import { TasksService } from 'src/app/api/services';
+import { TasksService, WorksService } from 'src/app/api/services';
+import { throwError } from 'rxjs';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class DetailedInformationComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<DetailedInformationComponent>,
     @Inject(MAT_DIALOG_DATA) public data: CompactTask,
-    private taskServe: TasksService) { }
+    private taskServe: TasksService, private workService : WorksService) { }
 
   ngOnInit() {
     this.getFullTask();
@@ -46,6 +47,17 @@ export class DetailedInformationComponent implements OnInit {
     try {
       this.task = await this.taskServe.apiTasksIdGet({id: this.data.id}).toPromise();
     } catch (ex) {
+      alert("Что-то не так!");
+    }
+  }
+
+  async onTakeTask()
+  {
+    try{
+    await this.workService.apiWorksPost$Json({body: this.task.id}).toPromise();
+    this.dialogRef.close();
+    } catch (ex)
+    {
       alert("Что-то не так!");
     }
   }

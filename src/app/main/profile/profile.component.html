@@ -1,6 +1,6 @@
 <h1 class="title">Профайл</h1>
 
-<button mat-button (click)="openDialog()">Верификация</button>
+<button mat-button (click)="openDialogVerif()">Верификация</button>
 
 <div div class="tasks" *ngIf="tasks.length != 0; else elseBlock">
     <div class="task-block" *ngFor="let task of tasks">
@@ -18,8 +18,7 @@
                 <div class="title">Контактное лицо:</div>
                 <div class="description">{{ task.contactPerson.name }}</div>
             </div>
-            <button>Информация</button>
-
+            <button mat-button (click)="openDialogResult(task)">{{ checkStatus(task) }}</button>
             <div class="price">
                 <div class="title">Вознаграждение:</div>
                 <div *ngFor="let price of task.prices">
