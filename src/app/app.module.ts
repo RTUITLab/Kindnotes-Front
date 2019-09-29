@@ -30,6 +30,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { DetailedInformationComponent } from './main/posts/detailed-information/detailed-information.component';
 import { CompactComponent } from './main/posts/compact/compact.component';
 import { CategoriesComponent } from './main/left-bar/categories/categories.component';
+import { PopularComponent } from './main/left-bar/popular/popular.component';
 
 export const API_INTERCEPTOR_PROVIDER: Provider = {
   provide: HTTP_INTERCEPTORS,
@@ -51,7 +52,8 @@ export const API_INTERCEPTOR_PROVIDER: Provider = {
     PostsComponent,
     DetailedInformationComponent,
     CompactComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    PopularComponent
   ],
   imports: [
     BrowserModule,

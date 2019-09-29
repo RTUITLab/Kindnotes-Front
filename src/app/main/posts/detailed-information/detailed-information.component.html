@@ -22,15 +22,25 @@
           <p><b>Срок выполнения:</b> <br>{{setData(task.deadline)}}</p>
         </div>
         <div>
-          <p><b>Вознаграждение:</b></p>
+          <p style="margin-bottom: 0%"><b>Вознаграждение:</b></p>
           <div class="bottom-info-price">
-            <p *ngFor="let price of task.prices">{{getPrice(price)}}</p>
+            <p *ngFor="let price of task.prices" style="margin: 0%">{{getPrice(price)}};&nbsp;</p>
           </div>
         </div>
       </div>
     </div>
-    <div>
-      <p>Соц сети</p>
+    <div class="button-block">
+      <div>
+        <p>Соц сети</p>
+      </div>
+      <div class="button-block-active">
+        <div>
+          <button>Выполнить</button>
+        </div>
+        <div>
+          <button (click)="onNoClick()">Отменить</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

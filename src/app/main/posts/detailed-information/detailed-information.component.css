@@ -13,6 +13,7 @@
     grid-row: auto;
     grid-template-areas: "t t";
     grid-template-columns: 80% 20%;
+    height: 100%;
 }
 .bottom-info{
   display: grid;
@@ -21,6 +22,16 @@
 
 .bottom-info-price{
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: row;
+}
+
+.button-block{
+  display: grid;
+  /* grid-template-areas: "t t"; */
+  grid-template-rows: 40% 60%;
+}
+
+.button-block-active
+{
+  align-self: flex-end;
 }

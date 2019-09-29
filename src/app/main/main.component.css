@@ -11,7 +11,7 @@
     "top top top"
     "nav main right";
     grid-template-columns: 15.8% 1fr 20%;
-    grid-template-rows: 9.9vh auto 
+    grid-template-rows: 25% auto 
 }
 .main-bar {
     grid-area: main;

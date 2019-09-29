@@ -49,4 +49,8 @@ export class DetailedInformationComponent implements OnInit {
       alert("Что-то не так!");
     }
   }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TasksService } from 'src/app/api/services';
-import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { CompactTask } from 'src/app/api/models';
 import { DetailedInformationComponent } from './detailed-information/detailed-information.component';
 
@@ -45,6 +45,7 @@ export class PostsComponent implements OnInit {
     const dialogRef = this.dialog.open(DetailedInformationComponent, {
       width: '70%',
       height: '70%',
+      panelClass: "test-dialog",
       data: task
     });
 
