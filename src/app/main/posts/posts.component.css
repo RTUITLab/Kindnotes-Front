@@ -18,4 +18,9 @@
 .price{
     display: flex;
     flex-direction: row;
+    padding-left: 5%;
+}
+
+.price > div {
+    padding-left: 5%;
 }

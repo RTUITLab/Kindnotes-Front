@@ -14,13 +14,15 @@
             </div>
             <div>
                 <h3>Контактное лицо:</h3>
-                <p>{{ task.contactPerson.name }} -  {{task.contactPerson.id}}</p>
+                <p>{{ task.contactPerson.name }}</p>
             </div>
-            <button mat-button (click)="openDialog()">Информация</button>
+            <button mat-button (click)="openDialog(task)">Информация</button>
 
             <div class="price">
                 <p>Вознаграждение:</p>
-                
+                <div *ngFor="let price of task.prices">
+                        <p>{{price.priceType.name}}</p>
+                    </div>
             </div>
         </div>
         <div class="social">

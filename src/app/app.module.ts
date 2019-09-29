@@ -90,6 +90,8 @@ export const API_INTERCEPTOR_PROVIDER: Provider = {
   providers: [UserService,
     ApiInterceptor,
     API_INTERCEPTOR_PROVIDER],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[PostsComponent,
+    DetailedInformationComponent]
 })
 export class AppModule { }

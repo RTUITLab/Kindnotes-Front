@@ -27,25 +27,30 @@ export class PostsComponent implements OnInit {
   getInitiator(task: CompactTask) {
     if (task.organizationInitiator)
       return task.organizationInitiator.name;
-
+      
     return task.personInitiator.name;
   }
 
   setData(task: string) {
     const date: Date = new Date(task);
-
-    return `${date.getDay() - 1}.${date.getMonth() + 1}.${date.getFullYear()}`;
+    const s : string = date.getDay() + 1 < 10 ? `0${date.getDay() + 1}` : `${date.getDay() + 1}`
+    return `${s}.${date.getMonth() + 1}.${date.getFullYear()}`;
   }
 
   ngOnInit() {
     this.getNews();
   }
 
-  openDialog() {
-    this.dialog.open(DetailedInformationComponent, {
-      data: {
-        animal: 'panda'
-      }
+  openDialog(task): void {
+    const dialogRef = this.dialog.open(DetailedInformationComponent, {
+      width: '70%',
+      height: '70%',
+      data: task
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+     
     });
   }
 }

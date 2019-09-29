@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { IdentityService } from '../api/services';
 import { TouchSequence } from 'selenium-webdriver';
-import { UserModel } from '../api/models';
+import { CompactPerson } from '../api/models/compact-person';
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
@@ -30,7 +30,7 @@ export class ApiInterceptor implements HttpInterceptor {
 })
 export class UserService {
 
-  userModel: UserModel;
+  userModel: CompactPerson;
 
   constructor(private identity: IdentityService) {
 
@@ -49,7 +49,7 @@ export class UserService {
 
     try {
       this.userModel = await this.identity.apiIdentityMeGet().toPromise();
-      alert(`Здравствуй, ${this.userModel.userName}`)
+      alert(`Здравствуй, ${this.userModel.name}`)
     } catch (ex) {
       alert(`Чет не так! ${ex}`);
     }

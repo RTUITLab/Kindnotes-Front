@@ -1,15 +1,36 @@
-<h1 mat-dialog-title>Favorite Animal</h1>
 <div mat-dialog-content>
-  My favorite animal is:
-  <ul>
-    <li>
-      <span *ngIf="data.animal === 'panda'">&#10003;</span> Panda
-    </li>
-    <li>
-      <span *ngIf="data.animal === 'unicorn'">&#10003;</span> Unicorn
-    </li>
-    <li>
-      <span *ngIf="data.animal === 'lion'">&#10003;</span> Lion
-    </li>
-  </ul>
+  <div class="ricardo">
+    <div *ngIf="task">
+      <h2>{{task.title}}</h2>
+      <div>
+        <p><b>Заказчик:</b> {{getInitiator(task)}}</p>
+      </div>
+      <div>
+        <p><b>Контактное лицо:</b> {{task.contactPerson.name}}</p>
+      </div>
+      <div>
+        <p><b>Местро проведения:</b> г. {{task.placeCity.name}}</p>
+      </div>
+      <div>
+        <p><b>Описание события:</b> {{task.description}}</p>
+      </div>
+      <div>
+        <p><b>Задание:</b> {{task.taskText}}</p>
+      </div>
+      <div class="bottom-info">
+        <div>
+          <p><b>Срок выполнения:</b> <br>{{setData(task.deadline)}}</p>
+        </div>
+        <div>
+          <p><b>Вознаграждение:</b></p>
+          <div class="bottom-info-price">
+            <p *ngFor="let price of task.prices">{{getPrice(price)}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p>Соц сети</p>
+    </div>
+  </div>
 </div>
