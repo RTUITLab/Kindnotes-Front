@@ -31,6 +31,7 @@ import { DetailedInformationComponent } from './main/posts/detailed-information/
 import { CompactComponent } from './main/posts/compact/compact.component';
 import { CategoriesComponent } from './main/left-bar/categories/categories.component';
 import { PopularComponent } from './main/left-bar/popular/popular.component';
+import { ProfileComponent } from './main/profile/profile.component';
 
 export const API_INTERCEPTOR_PROVIDER: Provider = {
   provide: HTTP_INTERCEPTORS,
@@ -53,7 +54,8 @@ export const API_INTERCEPTOR_PROVIDER: Provider = {
     DetailedInformationComponent,
     CompactComponent,
     CategoriesComponent,
-    PopularComponent
+    PopularComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -73,6 +75,7 @@ export const API_INTERCEPTOR_PROVIDER: Provider = {
           {
             path: 'posts', component: PostsComponent
           },
+          {path: 'profile', component: ProfileComponent}
         ]
       },
       {

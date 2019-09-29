@@ -16,7 +16,7 @@ export class PostsComponent implements OnInit {
   constructor(private task: TasksService, public dialog: MatDialog) {
   }
 
-  async getNews() {
+  async getTasks() {
     try {
       this.tasks = await this.task.apiTasksGet().toPromise();
     } catch (ex) {
@@ -38,7 +38,7 @@ export class PostsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getNews();
+    this.getTasks();
   }
 
   openDialog(task): void {

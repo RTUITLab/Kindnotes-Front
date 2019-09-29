@@ -1,0 +1,27 @@
+.tasks{
+    display: grid;
+    grid-template-areas: "t t";
+}
+.task-block{
+    text-align: left;
+    margin: 5%;
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.info{
+    background-color: aquamarine
+}
+.social{
+    background-color: aqua;
+}
+.price{
+    display: flex;
+    flex-direction: row;
+    padding-left: 5%;
+}
+
+.price > div {
+    padding-left: 5%;
+}
+

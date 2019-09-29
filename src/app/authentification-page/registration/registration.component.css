@@ -54,6 +54,7 @@ input {
   margin-bottom: 46px;
   margin-right: 40px;
   padding-left: 10px;
+  outline: none;
 }
 
 .inputText {
@@ -237,6 +238,7 @@ button {
   height: 55px;
   background-color: #ffbea7;
   border: none;
+  outline: none;
 }
 
 .info {
