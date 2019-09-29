@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-approv',
@@ -8,9 +9,19 @@ import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dial
 })
 export class ApprovComponent implements OnInit {
 
-  constructor(public dialogRef: MatDialogRef<ApprovComponent>) { }
+  approvForm;
+
+  constructor(public dialogRef: MatDialogRef<ApprovComponent>,  private formBuilder : FormBuilder) {
+    this.approvForm = this.formBuilder.group({
+      nameFile: ''
+    });
+   }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    
   }
 
 }
