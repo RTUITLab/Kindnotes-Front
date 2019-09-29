@@ -17,6 +17,8 @@ import { LeftBarComponent } from './main/left-bar/left-bar.component';
 import { RightBarComponent } from './main/right-bar/right-bar.component';
 import { NewsComponent } from './main/news/news.component';
 import { UserService } from './service/user-service.service';
+import { AngularFontAwesomeModule } from "angular-font-awesome"
+
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ApiInterceptor } from 'src/app/service/user-service.service'
@@ -26,6 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule }  from '@angular/material/core';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DetailedInformationComponent } from './main/posts/detailed-information/detailed-information.component';
+import { CompactComponent } from './main/posts/compact/compact.component';
+import { CategoriesComponent } from './main/left-bar/categories/categories.component';
 
 export const API_INTERCEPTOR_PROVIDER: Provider = {
   provide: HTTP_INTERCEPTORS,
@@ -45,7 +49,9 @@ export const API_INTERCEPTOR_PROVIDER: Provider = {
     RightBarComponent,
     NewsComponent,
     PostsComponent,
-    DetailedInformationComponent
+    DetailedInformationComponent,
+    CompactComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
@@ -78,7 +84,8 @@ export const API_INTERCEPTOR_PROVIDER: Provider = {
         ]
       }]
     ),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularFontAwesomeModule
   ],
   providers: [UserService,
     ApiInterceptor,

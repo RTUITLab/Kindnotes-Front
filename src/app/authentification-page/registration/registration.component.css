@@ -254,6 +254,9 @@ button {
   padding-bottom: 15px;
 }
 
-#box {
-  margin-left:15%;
+.box {
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: 1010px;
+  margin: auto; 
 }
