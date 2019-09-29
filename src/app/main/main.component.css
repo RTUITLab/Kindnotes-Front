@@ -10,8 +10,8 @@
     grid-template-areas: 
     "top top top"
     "nav main right";
-    grid-template-columns: 15.8% 1fr 20%;
-    grid-template-rows: 9.9vh auto 
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 70px 100%; 
 }
 .main-bar {
     grid-area: main;
