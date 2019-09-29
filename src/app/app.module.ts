@@ -33,6 +33,7 @@ import { CategoriesComponent } from './main/left-bar/categories/categories.compo
 import { PopularComponent } from './main/left-bar/popular/popular.component';
 import { ProfileComponent } from './main/profile/profile.component';
 import { VerificationComponent } from './main/profile/verification/verification.component';
+import { NewsDetailedComponent } from './main/news/news-detailed/news-detailed.component';
 
 export const API_INTERCEPTOR_PROVIDER: Provider = {
   provide: HTTP_INTERCEPTORS,
@@ -57,7 +58,8 @@ export const API_INTERCEPTOR_PROVIDER: Provider = {
     CategoriesComponent,
     PopularComponent,
     ProfileComponent,
-    VerificationComponent
+    VerificationComponent,
+    NewsDetailedComponent
   ],
   imports: [
     BrowserModule,
@@ -73,6 +75,9 @@ export const API_INTERCEPTOR_PROVIDER: Provider = {
         path: '', component: MainComponent, children: [
           {
             path: '', component: NewsComponent
+          },
+          {
+            path: 'news/:id', component: NewsDetailedComponent
           },
           {
             path: 'posts', component: PostsComponent

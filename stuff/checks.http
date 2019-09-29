@@ -1,0 +1,30 @@
+@token=eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwidW5pcXVlX25hbWUiOiLQpNC-0LzQuNGH0ZHQsiDQm9Cw0LLRgCIsInJvbGUiOiJwdWJsaXNoZXIiLCJuYmYiOjE1Njk3MjU0MDQsImV4cCI6MTYwMTM0NzgwNCwiaWF0IjoxNTY5NzI1NDA0fQ.45YnJ2Qn4DEkFVjKFkQGCOjUKZ7K99fO8C7HVP2uLGLa286gR8viz_9dd2XY5H2d5U6kYfSphzYahA0XscCOyg
+
+POST http://10.70.3.91:5000/api/identity/login
+Content-Type: application/json
+
+{
+    "email": "test1@rtuitlab.ru",
+    "password": "MyLongPassword"
+}
+
+###
+GET http://10.70.3.91:5000/api/identity/me
+Authorization: Bearer {{token}}
+
+###
+GET http://10.70.3.91:5000/api/tasks/5
+
+###
+GET http://10.70.3.91:5000/api/tasks
+
+###
+GET http://10.70.3.91:5000/api/works
+Authorization: Bearer {{token}}
+
+###
+POST http://10.70.3.91:5000/api/works
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+3

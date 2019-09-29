@@ -1,0 +1,6 @@
+<div *ngIf="newsItem">
+    <p >{{newsItem.title}}</p>
+    <div *ngFor="let link of newsItem.networks">
+        <p>{{link.title}}</p>
+    </div>
+</div>
