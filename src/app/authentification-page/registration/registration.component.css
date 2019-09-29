@@ -1,0 +1,259 @@
+.slogan {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 0 0;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+.sloganText {
+  font-family: Helvetica;
+  font-size: 40px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #9e7e81;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.loginBox{
+  width: 670px;
+  height: 450px;
+  box-shadow: 0 4px 4px 0 rgba(98, 98, 98, 0.25);
+  border: solid 1px #f1f1f1;
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding: 40px;
+  float: left;
+}
+
+.loginBoxText1{
+  height: 48px;
+  font-family: Helvetica;
+  font-size: 40px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(255, 255, 255, 0.76);
+  text-align: center;
+  padding-top: 20px;
+
+}
+
+input {
+  width: 331px;
+  height: 46px;
+  border: solid 1px #979797;
+  margin-top: 0px;
+  margin-bottom: 46px;
+  margin-right: 40px;
+  padding-left: 10px;
+}
+
+.inputText {
+  font-family: Helvetica;
+  font-size: 25px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #747474;
+  text-align: left;
+  margin-left: 0px;
+}
+
+.enter {
+  width: 727px;
+  height: 50px;
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.24), #ffffff 49%, rgba(255, 255, 255, 0.25));
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+.enterButton {
+  font-family: Helvetica;
+  font-size: 30px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #9e7e81;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #747474;
+  opacity: 1; /* Firefox */
+}
+
+.registerText{
+  font-family: Helvetica;
+  font-size: 21px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(255, 255, 255, 0.76);
+  text-align: left;
+}
+
+.registerTextContainer{
+  margin: 30px;
+}
+
+.line {
+  width: 594px;
+  height: 1px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.forgot {
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(255, 255, 255, 0.76);
+  text-align: right;
+  margin-left: 100px;
+}
+
+.stepContainer{
+  height:  450px;
+}
+
+.steps{
+  width: 251px;
+  height: 530px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  background-color: rgba(126, 126, 126, 0.61);
+  float: left;
+}
+
+.step{
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 20px; 
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.step1{
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 20px; 
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 10px;
+}
+
+.reg{
+  font-family: Helvetica;
+  font-size: 25px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  padding-left: 20px;
+  padding-bottom: 50px; 
+}
+
+.dot{
+  border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+
+    background: #fff;
+    color: #666;
+    text-align: center;
+
+    font: 25px Arial, sans-serif;
+    float: left;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.fields{
+  float: left;
+}
+
+.avatar{
+  background-image:url('src/assets/images/registration/Avatar.png');
+  width: 271px;
+  height: 258px;
+  object-fit: contain;
+}
+
+.enteringInfo{
+  float: left;
+}
+
+.submit {
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+button {
+  width: 271px;
+  height: 55px;
+  background-color: #ffbea7;
+  border: none;
+}
+
+.info {
+  width: 286px;
+  height: 88px;
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #747474;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#box {
+  margin-left:15%;
+}
