@@ -35,3 +35,26 @@
 {
   align-self: flex-end;
 }
+
+.div {
+  font-family: Helvetica;
+}
+
+.submit {
+  font-family: Helvetica;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+button {
+  width: 80px;
+  height: 30px;
+  background-color: #fa5375;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+}
