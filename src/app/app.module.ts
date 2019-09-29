@@ -33,6 +33,7 @@ import { CategoriesComponent } from './main/left-bar/categories/categories.compo
 import { PopularComponent } from './main/left-bar/popular/popular.component';
 import { ProfileComponent } from './main/profile/profile.component';
 import { VerificationComponent } from './main/profile/verification/verification.component';
+import { NewsDetailedComponent } from './main/news/news-detailed/news-detailed.component';
 import { ApprovComponent } from './main/profile/approv/approv.component';
 import { FinishTaskComponent } from './main/profile/finish-task/finish-task.component';
 
@@ -60,6 +61,7 @@ export const API_INTERCEPTOR_PROVIDER: Provider = {
     PopularComponent,
     ProfileComponent,
     VerificationComponent,
+    NewsDetailedComponent,
     ApprovComponent,
     FinishTaskComponent
   ],
@@ -77,6 +79,9 @@ export const API_INTERCEPTOR_PROVIDER: Provider = {
         path: '', component: MainComponent, children: [
           {
             path: '', component: NewsComponent
+          },
+          {
+            path: 'news/:id', component: NewsDetailedComponent
           },
           {
             path: 'posts', component: PostsComponent
