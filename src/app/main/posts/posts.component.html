@@ -3,25 +3,30 @@
 <div div class="tasks" *ngIf="tasks.length != 0; else elseBlock">
     <div class="task-block" *ngFor="let task of tasks">
         <div class="info">
-            <h4>до {{ setData(task.deadline) }}</h4>
+            <div class="date">до {{ setData(task.deadline) }}</div>
             <div>
-                <h3>Тема:</h3>
-                <p>{{ task.title }}</p>
+                <div class="title">Тема:</div>
+                <div class="description">{{ task.title }}</div>
             </div>
             <div>
-                <h3>Заказчик:</h3>
-                <p>{{ getInitiator(task) }}</p>
+                <div class="title">Заказчик:</div>
+                <div class="description">{{ getInitiator(task) }}</div>
             </div>
             <div>
-                <h3>Контактное лицо:</h3>
-                <p>{{ task.contactPerson.name }}</p>
+                <div class="title">Контактное лицо:</div>
+                <div class="description">{{ task.contactPerson.name }}</div>
             </div>
-            <button mat-button (click)="openDialog(task)">Информация</button>
+            <div class="submitContainer">
+                <button class="submit" mat-button (click)="openDialog(task)">Информация</button>
+            </div>
+            
 
             <div class="price">
-                <p>Вознаграждение:</p>
+                <div class="title">Вознаграждение:</div>
                 <div *ngFor="let price of task.prices">
                         <p>{{price.priceType.name}}</p>
+                        <img src="../../../../src/assets/images/Icons/heart.svg" class="image1" *ngIf="price.priceType.name==='Деньги'">
+                        <p *ngIf="price.priceType.name==='Лайки'">ЛУКАСЫ</p>
                     </div>
             </div>
         </div>

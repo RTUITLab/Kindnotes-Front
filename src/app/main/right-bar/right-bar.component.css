@@ -22,6 +22,14 @@
   margin-left: 15px;
   margin-top: 50px;
 }
+.line1{
+  width: 170px;
+  height: 1px;
+  border: none;
+  background-color: transparent;
+  margin-left: 15px;
+  margin-top: 50px;
+}
 
 .info{
   font-family: Helvetica;
@@ -36,11 +44,11 @@
 }
 
 .iconHeart{
-  background-image:url('src/assets/images/Icons/like.svg');
+  background-image:url('src/assets/images/Icons/heart.svg');
   width: 20px;
   height: 20px;
   object-fit: contain;
-  border-color: white;
+  border-color: none;
 }
 
 .iconComment{

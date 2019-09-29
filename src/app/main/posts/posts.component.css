@@ -10,18 +10,59 @@
 }
 
 .info{
-    background-color: aquamarine
+    background-color: rgba(241, 241, 241, 0.91);
 }
 .social{
-    background-color: aqua;
+  background-color: rgba(164, 164, 164, 0.62);
 }
+
+.title{
+    font-family: Helvetica;
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.description{
+    font-family: Helvetica;
+    font-size: 16px;
+    margin: 10px;
+    color: #737373;
+}
+
+.date {
+    text-align: right;
+    margin: 10px;
+    font-family: Helvetica;
+    font-size: 14px;
+}
+
+.submit {
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+  button {
+    width: 271px;
+    height: 55px;
+    background-color: #fa5375;
+    border: none;
+    outline: none;
+  }
+
 .price{
-    display: flex;
-    flex-direction: row;
-    padding-left: 5%;
+    text-align: left;
 }
 
-.price > div {
-    padding-left: 5%;
-}
+.submitContainer {
+text-align: center;
+  }
 
+  .image1{
+      background-image: url('src/assets/images/Icons/heart.svg')
+  }
