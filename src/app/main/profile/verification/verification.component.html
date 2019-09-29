@@ -1,5 +1,5 @@
 <h1 mat-dialog-title>Верификация</h1>
-<form [formGroup]="verifForm" (ngSubmit)="onSubmit(authForm.value)">
+<form [formGroup]="verifForm" (ngSubmit)="onSubmit(verifForm.value)">
     <div>
         <label>
             <input class="inputText" type="text" placeholder="Номер телефона" formControlName="phone">

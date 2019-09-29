@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>Сдача задания</h1>
+<form [formGroup]="finishForm" (ngSubmit)="onSubmit(finishForm.value)">
+    <p>Укажите ссылки на социальные сети:</p>
+    <div *ngFor="let social of data.networks">
+        {{social.title}}:  
+        <input type="text">
+    </div>
+    <br><button type="submit" style="margin-top: 4%">Отправить</button>
+</form>

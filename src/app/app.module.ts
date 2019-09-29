@@ -33,6 +33,8 @@ import { CategoriesComponent } from './main/left-bar/categories/categories.compo
 import { PopularComponent } from './main/left-bar/popular/popular.component';
 import { ProfileComponent } from './main/profile/profile.component';
 import { VerificationComponent } from './main/profile/verification/verification.component';
+import { ApprovComponent } from './main/profile/approv/approv.component';
+import { FinishTaskComponent } from './main/profile/finish-task/finish-task.component';
 
 export const API_INTERCEPTOR_PROVIDER: Provider = {
   provide: HTTP_INTERCEPTORS,
@@ -57,7 +59,9 @@ export const API_INTERCEPTOR_PROVIDER: Provider = {
     CategoriesComponent,
     PopularComponent,
     ProfileComponent,
-    VerificationComponent
+    VerificationComponent,
+    ApprovComponent,
+    FinishTaskComponent
   ],
   imports: [
     BrowserModule,
@@ -98,8 +102,12 @@ export const API_INTERCEPTOR_PROVIDER: Provider = {
     ApiInterceptor,
     API_INTERCEPTOR_PROVIDER],
   bootstrap: [AppComponent],
-  entryComponents: [PostsComponent,
-    DetailedInformationComponent, ProfileComponent,
-    VerificationComponent]
+  entryComponents: [
+    PostsComponent,
+    DetailedInformationComponent, 
+    ProfileComponent,
+    VerificationComponent, 
+    ApprovComponent,
+    FinishTaskComponent]
 })
 export class AppModule { }
