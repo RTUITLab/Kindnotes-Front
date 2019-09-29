@@ -1,6 +1,6 @@
 <h1 mat-dialog-title>Согласование материала</h1>
-<form [formGroup]="approvForm" (ngSubmit)="onSubmit(approvForm.value)">
+<form [formGroup]="approvForm" (ngSubmit)="onSubmit()">
     <p>Загрузите Ваш написанный матриал для согласования</p>
-    <input type="file">Документ с материалом
+    <input type="file" (change)="setFile($event)">Документ с материалом
     <br><button type="submit" style="margin-top: 4%">Отправить</button>
 </form>

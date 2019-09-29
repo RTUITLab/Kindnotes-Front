@@ -64,9 +64,10 @@ export class ProfileComponent implements OnInit {
       case 1:
         {
           const dialogRef = this.dialog.open(ApprovComponent, {
-            width: '25%',
+            width: '30%',
             height: '20%',
             panelClass: "test-dialog",
+            data: task
           });
           break;
         }
