@@ -1,5 +1,20 @@
 # Kindnotes
 
+Проект команды RealityShift на хакатоне Цифровой прорыв 2019 - финал
+
+Презентация:
+
+![Slide1](https://user-images.githubusercontent.com/12235437/117529236-510c2f00-af8b-11eb-98e9-243cf368180d.png)
+![Slide2](https://user-images.githubusercontent.com/12235437/117529237-510c2f00-af8b-11eb-9d78-645cff2a7d22.png)
+![Slide3](https://user-images.githubusercontent.com/12235437/117529238-51a4c580-af8b-11eb-91c5-289351dd0362.png)
+![Slide4](https://user-images.githubusercontent.com/12235437/117529229-4e113e80-af8b-11eb-829d-af99dc24c510.png)
+![Slide5](https://user-images.githubusercontent.com/12235437/117529230-4f426b80-af8b-11eb-958d-b1274714932b.png)
+![Slide6](https://user-images.githubusercontent.com/12235437/117529231-4fdb0200-af8b-11eb-91cf-b9b4e6649b2d.png)
+![Slide7](https://user-images.githubusercontent.com/12235437/117529232-4fdb0200-af8b-11eb-92f2-3d78ba8eb448.png)
+![Slide8](https://user-images.githubusercontent.com/12235437/117529233-50739880-af8b-11eb-8386-80d4dfdab912.png)
+![Slide9](https://user-images.githubusercontent.com/12235437/117529234-50739880-af8b-11eb-9994-22379fa6c699.png)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
 
 ## Development server
